@@ -18,6 +18,9 @@
   Author:         Alexandre-Jacques St-Jacques
   Creation Date:  15-05-2021
   Purpose/Change: Initial script development
+
+.LINK 
+  https://github.com/Maelstrom96/SyncroMSP-Scripts/blob/main/scripts/tpm-status.ps1
 #>
 
 try {
