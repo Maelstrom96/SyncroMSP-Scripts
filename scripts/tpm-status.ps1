@@ -20,17 +20,10 @@ BootType         | Text field
   Purpose/Change: Initial script development
 #>
 
-#Param (
-#    [parameter(Mandatory=$false)]
-#    $localdebug = 'False',
-#    [parameter(Mandatory=$false)]
-#    $FailOnMissing = 'False'
-#)
-
-if (![System.Convert]::ToBoolean($localdebug)) {
-    Import-Module $env:SyncroModule
+try {
+    Import-Module $env:SyncroModule -erroraction stop 
 }
-else {
+catch {
     $env:RepairTechUUID = (Get-ItemProperty -Path "HKLM:\SOFTWARE\WOW6432Node\RepairTech\Syncro" -Name "uuid").uuid
     $env:RepairTechApiBaseURL = "syncromsp.com"
     $env:RepairTechApiSubDomain = (Get-ItemProperty -Path "HKLM:\SOFTWARE\WOW6432Node\RepairTech\Syncro" -Name "shop_subdomain").shop_subdomain
