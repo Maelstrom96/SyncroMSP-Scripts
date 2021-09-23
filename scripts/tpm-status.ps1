@@ -1,17 +1,17 @@
 <#
 .Synopsis
-   Check TPM Version, SecureUEFI and BootType
+  Check TPM Version, SecureUEFI and BootType
 .DESCRIPTION
 
 .SYNCRO-VARS
-# If the TPM check fails, exit the script with an error.
-FailOnMissing | Dropdown | "True", "False"
+  # If the TPM check fails, exit the script with an error.
+  FailOnMissing | Dropdown | "True", "False"
 
 .SYNCRO-CUSTOM-FIELDS
-TPM              | Text field
-TPM Enabled      | Check box
-Secure Boot UEFI | Check box
-BootType         | Text field
+  TPM              | Text field
+  TPM Enabled      | Check box
+  Secure Boot UEFI | Check box
+  BootType         | Text field
 
 .NOTES
   Version:        1.0
